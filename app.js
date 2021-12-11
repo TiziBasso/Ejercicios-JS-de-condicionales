@@ -215,12 +215,88 @@ if (mes == 1) {
 
 */
 
-/*BONUS LOS HACE LUCIA Y SIN AYUDA :) :)
+/*BONUS
 
 1. Solicitar al usuario su clave de 4 dígitos (que tendremos almacenada en una variable) y el monto a retirar. Si la clave es correcta y el monto mayor al balance, realizar la operación. Sino, mostrar un mensaje de error en caso de ser la clave incorrecta o pedir más dinero del disponible.
 
-2. Solicitar al usuario su día y mes de nacimiento e indicar cual es su signo zodiacal.
 
-3. Solicitar al usuario que ingrese la hora y su nombre. Si son entre las 12 inclusive y 19 saludar con buenas tardes, entre 19 inclusive y 5 buenas noches, y entre 5 inclusive y 12 buenos días. 
+let clave = 4523;
+let balance = 10000;
 
+let claveIngresada = prompt("Ingrese su clave de seguridad");
+
+if (clave == claveIngresada) {
+    let monto = prompt("Su balance es de $" + balance + ". Ingrese el monto a retirar");
+
+    if (monto < balance) {
+        balance = balance - monto;
+        alert("Su balance es de $" + balance);
+    } else {
+        alert("No puede retirar más dinero del que tiene disponible")
+    }
+
+} else {
+    alert("Ingreso una clave incorrecta")
+}
 */
+
+
+/*2. Solicitar al usuario su día y mes de nacimiento e indicar cual es su signo zodiacal.
+
+let dia = prompt("Ingrese su día de nacimiento");
+let mes = prompt("Ingrese su mes de nacimiento (en número)");
+
+if ((dia >= 21 && mes == 3) || (dia <= 20 && mes==4 )) {
+    alert('Aries');
+
+} else if((dia >= 21 && mes == 4)||(dia <= 21 && mes == 5)){
+    alert('Tauro');
+
+} else if((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6)) {
+    alert('Géminis');
+
+} else if((dia >= 21 && mes == 6) || (dia <= 23 && mes == 7)) {
+    alert('Cáncer');
+
+} else if((dia >= 24 && mes == 7) || (dia <= 23 && mes == 8)) {
+    alert('Leo');
+
+} else if((dia >= 24 && mes == 8) || (dia <= 23 && mes == 9)) {
+    alert('Virgo');
+
+} else if ((dia >= 24 && mes == 9) || (dia <= 23 && mes == 10)) {
+    alert('Libra');
+
+} else if((dia >= 24 && mes == 10) || (dia <= 22 && mes == 11)) {
+    alert('Escorpio');
+
+} else if((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12)) {
+    alert('Sagitario');
+
+} else if((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1)) {
+    alert('Capricornio');
+
+} else if((dia >= 21 && mes == 1)||(dia <=19 && mes == 2)) {
+    alert('Acuario');
+
+} else if((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3)) {
+    alert('Piscis');
+
+} else {
+    alert("No es una fecha válida");
+}
+*/       
+
+
+//3. Solicitar al usuario que ingrese la hora y su nombre. Si son entre las 12 inclusive y 19 saludar con buenas tardes, entre 19 inclusive y 5 buenas noches, y entre 5 inclusive y 12 buenos días. 
+
+let nombre = prompt("Ingrese su nombre");
+let hora = prompt("Ingrese la hora (Ej.: 19.20)");
+
+if (hora >= 12 && hora < 19) {
+    alert("Buenas tardes " + nombre);
+} else if (hora >= 19 || hora < 5) {
+    alert("Buenas noches " + nombre);
+} else {
+    alert("Buenos días " + nombre);
+}
